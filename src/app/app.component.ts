@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StringCalculatorService } from './string-calculator.service';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
+  constructor(private stringCalService:StringCalculatorService){}
 
   public userInput :any
   public sum:any;
   onClick(){
-    this.sum = 0
+    this.sum = this.stringCalService.add(this.userInput)
   }
 }
