@@ -81,3 +81,8 @@
     font-weight: bold;
     color: #007bff;
 }
+
+.disable{
+    opacity: 0.5;
+    pointer-events: none;
+}

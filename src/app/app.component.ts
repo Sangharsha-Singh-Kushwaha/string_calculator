@@ -12,7 +12,15 @@ export class AppComponent {
 
   public userInput :any
   public sum:any;
+  public intialUserInput:any
   onClick(){
-    this.sum = this.stringCalService.add(this.userInput)
+    this.intialUserInput = this.userInput;
+    try {
+      this.sum = this.stringCalService.add(this.userInput);
+    } catch (error) {
+      this.sum =undefined;
+      alert(error);
+    }
+    
   }
 }

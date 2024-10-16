@@ -5,7 +5,7 @@
         </div>
         <div class="card-body">
             <input type="text" name="userInput" id="user" [(ngModel)]="userInput">
-            <button type="button" (click)="onClick()">SUM</button>
+            <button type="button" (click)="onClick()" [ngClass]="{'disable':intialUserInput==userInput}">SUM</button>
         </div>
         <div class="card-footer" *ngIf="sum >=0">
             <p>Sum of numbers present in string : <span>{{sum}}</span></p>
