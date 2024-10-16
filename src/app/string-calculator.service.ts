@@ -22,12 +22,12 @@ export class StringCalculatorService {
     const numbersCollection = matchesNubers ? matchesNubers?.map(Number) : []; //Converting matches to numbers and return as numbersCollection array
     let negatives: any = [];
     let sum:number = 0;
-    numbersCollection.forEach((ele:any) =>{
-      ele < 0 ? negatives.push(ele) : sum +=ele > 1000 ? 0 : ele;
+    numbersCollection?.forEach((ele:any) =>{
+      ele < 0 ? negatives?.push(ele) : sum +=ele > 1000 ? 0 : ele;
     })
 
     if (negatives.length > 0) {
-      throw new Error(`negatives not allowed: ${negatives.join(', ')}`);
+      throw new Error(`negatives not allowed: ${negatives?.join(', ')}`);
     }
     return sum;
   }
